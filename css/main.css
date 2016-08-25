@@ -61,6 +61,11 @@ nav {
   border-radius: 50%;
 }
 
+.prof-pic img {
+  height: 100%;
+  width: 100%;
+}
+
 .material-icons.about {
   font-size: 60px;
   background-color: white;
