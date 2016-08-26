@@ -2,11 +2,12 @@
 <html lang="en" ng-app="portfolio">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
   <title>Gamaliel Padillo | Junior Web Developer | Amateur Photographer</title>
 
+  <!-- Ico file -->
   <link rel="apple-touch-icon" sizes="57x57" href="/assets/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/assets/apple-icon-60x60.png">
   <link rel="apple-touch-icon" sizes="72x72" href="/assets/apple-icon-72x72.png">
@@ -25,118 +26,89 @@
   <meta name="msapplication-TileImage" content="/assets/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
 
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+  <!-- Third Party -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="stylesheet" href="/css/responsive.css">
 </head>
-<body ng-controller="PortfolioController">
+<body ng-controller="MainController as vm" ng-cloak>
+  <md-toolbar class="header">
+      <div class="md-toolbar-tools" layout="row" layout-align="space-between center">
+        <div hide-gt-xs show-xs flex>
+          <md-button class="md-icon-button md-accent" aria-label="Settings" ng-click="vm.openSidenav()">
+            <md-icon md-font-icon="fa-bars" class="fa fa-lg"></md-icon>
+          </md-button>
+        </div>
 
+        <img src="assets/favicon-96x96.png" alt="faviconlogo">
 
-  <div class="navbar-fixed">
-    <nav>
-      <div class="nav-wrapper">
-        <a href="#intro" class="brand-logo"><img src="http://i.imgur.com/BvNVYC0.png?1" alt="" class="brand"></a>
-        <a href="#intro" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-        <ul class="right hide-on-med-and-down">
-          <li><a href="#about">About</a></li>
-          <li><a href="#work">Work</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <ul class="side-nav" id="mobile-demo">
-          <li><a href="#about">About</a></li>
-          <li><a href="#work">Work</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+        <div hide-xs show-gt-xs flex layout="row" layout-align="end center">
+          <md-button  aria-label="Settings">
+            About
+          </md-button>
+          <md-button  aria-label="Settings">
+            Apps
+          </md-button>
+          <md-button  aria-label="Settings">
+            Photography
+          </md-button>
+          <md-button  aria-label="Settings">
+            Contact
+          </md-button>
+        </div>
       </div>
-    </nav>
-  </div>
+  </md-toolbar>
+  <md-sidenav class="md-sidenav-left" md-component-id="left" md-whiteframe="2">
+    <md-toolbar layout='row' layout-align='center center'>
+      <img src="assets/favicon-96x96.png" alt="faviconlogo" flex=15 ng-click="vm.closeSidenav()">
+    </md-toolbar>
+    <md-menu>
+      <md-menu-item>
+        <md-button>
+          About
+        </md-button>
+      </md-menu-item>
+      <md-divider></md-divider>
+      <md-menu-item>
+        <md-button>
+          Apps
+        </md-button>
+      </md-menu-item>
+      <md-divider></md-divider>
+      <md-menu-item>
+        <md-button>
+          Photography
+        </md-button>
+      </md-menu-item>
+      <md-divider></md-divider>
+      <md-menu-item>
+        <md-button>
+          Contact
+        </md-button>
+      </md-menu-item>
+      <md-divider></md-divider>
+    </md-menu>
+  </md-sidenav>
+  <md-content>
+  </md-content>
+  <footer layout="row" layout-align="center center">
+    <span flex>© 2016 Gamaliel Padillo</span>
+  </footer>
 
-  <div class="parallax-container" id="intro">
-    <h3>Web development and Photography</h3>
-    <p>Displaying the apps that I've built and the photos that I've taken.. <br>
-       Welcome to my portfolio!
-    </p>
-  </div>
-
-  <div id="about" class="content">
-    <ul>
-      <li>
-        <div>
-          <img class="prof-pic" src="http://i.imgur.com/BqwbE1b.jpg?2" alt="">
-          <p>
-            I'm Gamaliel (Yel for short), a Jr. Developer who just graduated from General Assembly's <br>
-            WDI course, 21 y.o, with a passion in learning new things, programming, <br>
-            and photography.
-          </p>
-        </div>
-      </li>
-      <li>
-        <i class="material-icons about">code</i>
-        <p>I have hands on experience on Javascript/jQuery, HTML, CSS, MEAN stack,Ruby, Ruby on Rails, git and github.<br>
-           I aim to grow as a developer and further my knowledge and skills in the field.</p>
-      </li>
-      <li>
-        <i class="material-icons about">thumb_up</i>
-        <p>I tend to find the positive in a negative situation by laughing.</p>
-      </li>
-    </ul>
-  </div>
-
-  <div class="parallax-container">
-    <div class="parallax"><img src="http://i.imgur.com/0UkQ6dE.jpg">
-
-    </div>
-  </div>
-  <div id="work" class="content">
-    <ul>
-      <li>
-        <div>
-          <a href="http://gamalielhere.github.io/ttt"><img src="http://i.imgur.com/9FFgu0I.png" alt="" class="sample1"></a>
-          <h3>Jedi Tic-Tac-Toe</h3>
-          <p>Built with HTML/CSS, vanilla Javascript, and small amount of jQuery/jQueryUI</p>
-        </div>
-      </li>
-      <li>
-        <a href="http://gamalielhere.github.io/snake"><img src="http://i.imgur.com/bJZMrbL.png" alt="" class="sample2"></a>
-        <h3>SNAKE!</h3>
-        <p>Classic game built with HTML/CSS, Javascript/jQuery</p>
-      </li>
-      <li>
-        <a href="https://gadit.herokuapp.com"><img src="http://i.imgur.com/bUUJIGG.png" alt="" class="sample2"></a>
-        <h3>GAdit</h3>
-        <p>An imitation of Reddit. Built with SQL, PostgreSQL, Ruby on Rails, Rails, HTML, CSS and Bootstrap</p>
-      </li>
-    </ul>
-  </div>
-
-  <div class="parallax-container">
-    <div class="parallax"><img src="http://i.imgur.com/0UkQ6dE.jpg">
-
-    </div>
-  </div>
-
-  <div class="parallax-container" id="contact" class="content">
-    <ul>
-      <h3>Want more? Check me out here: </h3>
-      <li><a href="http://www.instagram.com/gamalielhere"><img class="logo" src="http://www.csus.edu/coe/academics/doctorate/images/instagram%20round.png" alt=""></a></li>
-      <li><a href="http://www.linkedin.com/in/gamalielpadillo"><img class="logo" src="http://icons.iconarchive.com/icons/sicons/basic-round-social/512/linkedin-icon.png" alt=""></a></li>
-      <li><a href="http://www.twitter.com/gamalielhere"><img class="logo" src="http://www.uco.edu/central/passport/files/images/img/%20twitter-round-icon.png" alt=""></a></li>
-      <li><a href="mailto:gamalielgad1234@gmail.com"><img class="logo" src="https://cdn3.iconfinder.com/data/icons/complete-set-icons/512/mail512x512.png" alt=""></a></li>
-      <li><a href="http://www.github.com/gamalielhere"><img class="logo" src="https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-256.png" alt=""></a></li>
-    </ul>
-  </div>
-
-
-  <footer>© 2016 Gamaliel Padillo</footer>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+  <!-- Third party scripts -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
+  <script src="https://use.fontawesome.com/4f2463682d.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
-  <script src="/js/app.module.js"></script>
-  <script src="/js/app.services.js"></script>
-  <script src="/js/app.controllers.js"></script>
-  <script src="/js/main.js"></script>
+
+  <!-- Custom Scripts -->
+  <script src="/js/app.js"></script>
+  <script src="/js/controllers/main_controller.js"></script>
 </body>
 </html>

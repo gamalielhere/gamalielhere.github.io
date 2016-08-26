@@ -1,107 +1,14 @@
-
-body{
-  background-color: black;
-  color: white;
-}
-
-nav {
-  background-color: rgba(0,0,0,.5);
-
-}
-
-#intro {
-  background-image: url("http://i.imgur.com/QFNOfGG.jpg");
-  background-repeat: no-repeat;
-  height: 700px;
-  min-height: 35%;
-  text-align: right;
-  padding-right: 25px;
-  color: black;
-}
-
-.content {
-  height: 700px;
-  min-height: 35%;
-  text-align: right;
-  padding-right: 25px;
-}
-
-
-.image-link {
-  height: 300px;
-  width: 400px;
-}
-
-.content {
-  text-align: center;
-  padding-top: 150px;
-}
-
-#work.content, #contact > ul {
-  padding-top: 100px;
-  text-align: center;
-  min-width: 100%;
-}
-#work > ul, #about > ul,
-#contact > ul {
-  list-style: none;
-  text-align: center;
-}
-
-#work > ul > li, #about > ul > li,
-#contact > ul > li {
-  display: inline-block;
-  text-align: center;
-  margin:20px 20px;
-}
-
-.prof-pic {
-  height: 200px;
-  width: 200px;
-  border-radius: 50%;
-}
-
-.prof-pic img {
-  height: 100%;
-  width: 100%;
-}
-
-.material-icons.about {
-  font-size: 60px;
-  background-color: white;
-  color: black;
-  height: 200px;
-  width: 200px;
-  border-radius: 50%;
-  padding-top: 70px;
-
-}
-
-.sample1 {
-  height: 300px;
-  width: 400px;
-}
-
-.sample2 {
-  height: 250px;
-  width: 400px;
-}
-
-.logo {
-  height: 100px;
-  width: 100px;
-}
-
-.brand {
-  padding-left: 15px;
-  height: 60px;
-  width: 80px;
+.header {
+  color: #ffffff !important;
 }
 
 footer {
-  height: 70px;
-  background-color: white;
-  color: black;
+  height: 50px;
+  color: #fff;
+  background-color: #000;
+  width: 100%;
   text-align: center;
-  padding-top: 20px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
 }
