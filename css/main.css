@@ -1,3 +1,45 @@
 .navbar-fixed {
   position: fixed;
 }
+
+.slick-prev {
+  left: 0 !important;
+  height: auto !important;
+  width: auto !important;
+  z-index: 3 !important;
+}
+
+.slick-next {
+  right: 0 !important;
+  height: auto !important;
+  width: auto !important;
+  z-index: 3 !important;
+}
+
+.slick-prev:before {
+  color: grey !important;
+  content: '<' !important;
+  font-size: 20px !important;
+  display:inline-block;
+  -webkit-transform: scale(2,5); /* Safari and Chrome */
+  -moz-transform: scale(2,5); /* Firefox */
+  -ms-transform: scale(2,5); /* IE 9 */
+  -o-transform: scale(2,5); /* Opera */
+  transform: scale(2,5);
+  opacity: 1;
+  margin: 5px 5px 15px 10px;
+}
+
+.slick-next:before {
+  color: grey !important;
+  content: '>' !important;
+  font-size: 20px !important;
+  display:inline-block;
+  -webkit-transform: scale(2,5); /* Safari and Chrome */
+  -moz-transform: scale(2,5); /* Firefox */
+  -ms-transform: scale(2,5); /* IE 9 */
+  -o-transform: scale(2,5); /* Opera */
+  transform: scale(2,5);
+  opacity: 1;
+  margin: 5px 10px 15px 5px;
+}

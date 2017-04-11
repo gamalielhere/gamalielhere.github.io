@@ -4,4 +4,9 @@ $(document).ready(function(){
     indicators: false,
     interval: 5000
   });
+
+  $('.project-slider').slick({
+    arrows: true,
+    slidesToShow: 2
+  });
 });
