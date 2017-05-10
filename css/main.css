@@ -35,9 +35,13 @@ nav {
 
 .home-container,
 .about-container,
-.contact-container,
 .projects-container {
   height: 100%;
+  position: relative;
+}
+
+.contact-container {
+  margin: 0 !important;
   position: relative;
 }
 
