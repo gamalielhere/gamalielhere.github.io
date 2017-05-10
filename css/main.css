@@ -41,6 +41,7 @@ nav {
 }
 
 .contact-container {
+  background-color: #111;
   margin: 0 !important;
   position: relative;
 }
