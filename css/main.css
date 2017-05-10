@@ -1,45 +1,126 @@
+html,
+body {
+  background-color: #000;
+  height: 100%;
+  width: 100%;
+}
+
+nav {
+  background-color: rgba(0,0,0,0.3);
+}
+
 .navbar-fixed {
   position: fixed;
 }
 
-.slick-prev {
-  left: 0 !important;
-  height: auto !important;
-  width: auto !important;
-  z-index: 3 !important;
+.nav-wrapper {
+  margin: 0 !important;
 }
 
-.slick-next {
-  right: 0 !important;
-  height: auto !important;
-  width: auto !important;
-  z-index: 3 !important;
+.background-image {
+  background: url('/assets/la-skyline-elysian-park.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  position: relative;
+  opacity: 0.8;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
 }
 
-.slick-prev:before {
-  color: grey !important;
-  content: '<' !important;
-  font-size: 20px !important;
-  display:inline-block;
-  -webkit-transform: scale(2,5); /* Safari and Chrome */
-  -moz-transform: scale(2,5); /* Firefox */
-  -ms-transform: scale(2,5); /* IE 9 */
-  -o-transform: scale(2,5); /* Opera */
-  transform: scale(2,5);
-  opacity: 1;
-  margin: 5px 5px 15px 10px;
+.home-container,
+.about-container,
+.contact-container,
+.projects-container {
+  height: 100%;
+  position: relative;
 }
 
-.slick-next:before {
-  color: grey !important;
-  content: '>' !important;
-  font-size: 20px !important;
-  display:inline-block;
-  -webkit-transform: scale(2,5); /* Safari and Chrome */
-  -moz-transform: scale(2,5); /* Firefox */
-  -ms-transform: scale(2,5); /* IE 9 */
-  -o-transform: scale(2,5); /* Opera */
-  transform: scale(2,5);
-  opacity: 1;
-  margin: 5px 10px 15px 5px;
+.button-holder {
+  padding-top: 40px !important;
+}
+
+.header-container {
+  bottom: 0;
+  color: white;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  text-align: center;
+  top: 35vh;
+  right: 0;
+}
+
+.header-container h1 {
+  font-weight: 200;
+}
+
+.button-link {
+  border: 1px solid white;
+  color: white;
+  margin: 3px !important;
+  padding: 8px !important;
+}
+
+.header-container h1 span {
+  font-size: 2rem;
+  font-weight: 100;
+}
+
+.home-page-divider {
+  border-bottom: 2px dashed white;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  width: 60%;
+}
+
+.about-background {
+  background: #616161;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #9bc5c3, #616161);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #9bc5c3, #616161); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+  height: 100%;
+}
+
+.about-body {
+  margin: 0 !important;
+  position: absolute;
+  top: 63px;
+  bottom: 0;
+  color: white;
+  z-index: 3;
+  width: 100%;
+}
+
+.about-content-left {
+
+}
+
+.about-content-left img {
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 600px) {
+  .home-page-divider {
+    width: 80%;
+  }
+
+  .header-container h1 {
+    font-size: 3rem;
+  }
+
+  .header-container h1 span {
+    font-size: 1.5rem;
+  }
 }

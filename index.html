@@ -42,80 +42,80 @@
   </head>
   <body>
     <div class="navbar-fixed">
-      <nav style='background-color: rgba(0,0,0,0)'>
+      <nav>
         <div class="nav-wrapper">
+          <ul class="left right-align hide-on-med-and-down">
+            <li><a href="#home">Gamaliel Padillo</a></li>
+          </ul>
           <ul class="right hide-on-med-and-down">
             <li><a href="#home">Home</a></li>
-            <li><a href="#projects">Projects</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#photo">Photowall</a></li>
-            <li><a href="#contact">Keep in touch</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
       </nav>
     </div>
     <div class="home-container" id="home">
-      <div class="slider">
-        <ul class="slides">
-          <li>
-            <img src="/assets/la-skyline-elysian-park.jpg">
-            <div class="caption left-align">
-              <h3>Gamaliel Padillo</h3>
-              <h5 class="light grey-text text-lighten-3">Software Developer | Frontend Developer | FullStack Developer</h5>
-            </div>
-          </li>
-          <li>
-            <img src="/assets/black-and-white-echo-park.jpg">
-            <div class="caption left-align">
-              <h3>Skills:</h3>
-              <h5 class="light grey-text text-lighten-3">
-                HTML/Slim template/Liquid template | CSS/SCSS | Javascript/jQuery/Coffeescript/Typescript <br>
-                Angular 1/Angular 2 | Ruby on Rails | Ruby | MongoDB | Express.js | Node.js | Git | Github <br>
-                Agile Development | Heroku Deployment | C++ | Photoshop | PostgreSql | Bootstrap <br>
-                MaterializeCSS | Angular Material | Bash
-              </h5>
-            </div>
-          </li>
-          <li>
-            <img src="/assets/la-skyline.jpg">
-            <div class="caption left-align">
-              <h3>Photo credits: </h3>
-              <h5 class="light grey-text text-lighten-3">I took all the images here by myself.</h5>
-            </div>
-          </li>
-        </ul>
+      <div class="background-image"></div>
+      <div class="header-container">
+        <div class="home-page-divider"></div>
+        <h1>
+          Gamaliel Padillo <br>
+          <span> Front-end Developer | Fullstack Developer </span>
+        </h1>
+        <div class="home-page-divider"></div>
+        <div class="row container button-holder">
+          <div class="col s10 offset-s2">
+            <a href="#about" class='col s10 m3 button-link'> About </a>
+            <a href="#projects" class='col s10 m3 button-link'> Projects </a>
+            <a href="#contact" class='col s10 m3 button-link'> Contact </a>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="project-container" id="projects" style='background-color: black; height: 100vh; padding: 10vh 0 25vh;'>
-      <h2 class='center-align white-text'>PROJECTS</h2>
-      <div class="project-slider">
-        <a href="https://www.richhoneymonthly.com" target="_blank" style='padding: 10px'>
-          <img src="/assets/RichHoneyHomepage-ScreenCap.png" alt="" width='100%' style='opacity: .7'>
-        </a>
-        <a href="https://www.richhoneyprivatelabel.com" target="_blank" style='padding: 10px'>
-          <img src="/assets/RichHoneyPL-ScreenCap.png" alt="" width='100%' style='opacity: .7'>
-        </a>
-        <a href="https://www.richhoneyapparel.com" target="_blank" style='padding: 10px'>
-          <img src="/assets/RichHoneyApparel-ScreenCap.png" alt="" width='100%' style='opacity: .7'>
-        </a>
-        <a href="https://www.oomba.com" target="_blank" style='padding: 10px'>
-          <img src="/assets/OombaWeb-ScreenCap.png" alt="" width='100%' style='opacity: .7'>
-        </a>
-        <a href="http://park-here-app.herokuapp.com" target="_blank" style='padding: 10px'>
-          <img src="/assets/ParkHere-ScreenCap.png" alt="" width='100%' style='opacity: .7'>
-        </a>
-        <a href="http://gadit.herokuapp.com" target="_blank" style='padding: 10px'>
-          <img src="/assets/GAdit-ScreenCap.png" alt="" width='100%' style='opacity: .7'>
-        </a>
-        <a href="http://gamalielhere.github.io/snake" target="_blank" style='padding: 10px'>
-          <img src="/assets/Snake-ScreenCap.png" alt="" width='100%' style='opacity: .7'>
-        </a>
-        <a href="http://gamalielhere.github.io/ttt" target="_blank" style='padding: 10px'>
-          <img src="/assets/StarWars-TTT-ScreenCap.png" alt="" width='100%' style='opacity: .7'>
-        </a>
+    <div class="about-container" id="about">
+      <div class="about-background"></div>
+      <div class="row about-body">
+        <div class="col s12 m6 about-content-left">
+          <img src="assets/GA headshot.jpg" alt="" width="50%">
+          <div class="col s12">
+            <p style='font-size: 1.25rem;'>
+              My name is Gamaliel and I'm a Web Developer for <a href="https://www.richhoneyapparel.com/" target="_blank"> Rich Honey Inc</a>, an
+              apparel company that focuses on premium quality, US made blanks,
+              helping them launch a fully custom shopify shop, and a fullstack site.
+              I am also a software engineer for <a href="https://www.oomba.com/" target="_blank">Oomba Inc.</a>,
+              a tournament management platform, as part of their internal admin team.
+            </p>
+            <p style='font-size: 1.25rem;'>
+              I've become enticed on being a Software Engineer because of the problem solving
+              aspect. I enjoy working with teams, learning from seasoned coders,
+              and learning programming languages and/or tactics.
+            </p>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <h4>Socials:</h4>
+          <div class="row">
+            <a href="https://www.github.com/gamalielhere" class='col s8 offset-s4' style='font-size: 3rem; color: white;'>
+              <i class='fa fa-github' style='font-size: 5rem;'></i> Github
+            </a>
+            <a href="https://www.linkedin.com/in/gamalielpadillo" class='col s8 offset-s4' style='font-size: 3rem; color: white;'>
+              <i class='fa fa-linkedin' style='font-size: 5rem;'></i> Linkedin
+            </a>
+            <a href="https://www.twitter.com/gamalielhere" class='col s8 offset-s4' style='font-size: 3rem; color: white;'>
+              <i class='fa fa-twitter' style='font-size: 5rem;'></i> Twitter
+            </a>
+          </div>
+        </div>
       </div>
     </div>
+    <div class="projects-container" id="projects">
 
+    </div>
+    <div class="contact-container" id="contact">
+
+    </div>
     <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
     <script type="text/javascript" src="/js/main.js"></script>
   </body>
