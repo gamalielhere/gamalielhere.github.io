@@ -1,107 +1,166 @@
-
-body{
-  background-color: black;
-  color: white;
-}
-
-nav {
-  background-color: rgba(0,0,0,.5);
-
-}
-
-#intro {
-  background-image: url("http://i.imgur.com/QFNOfGG.jpg");
-  background-repeat: no-repeat;
-  height: 700px;
-  min-height: 35%;
-  text-align: right;
-  padding-right: 25px;
-  color: black;
-}
-
-.content {
-  height: 700px;
-  min-height: 35%;
-  text-align: right;
-  padding-right: 25px;
-}
-
-
-.image-link {
-  height: 300px;
-  width: 400px;
-}
-
-.content {
-  text-align: center;
-  padding-top: 150px;
-}
-
-#work.content, #contact > ul {
-  padding-top: 100px;
-  text-align: center;
-  min-width: 100%;
-}
-#work > ul, #about > ul,
-#contact > ul {
-  list-style: none;
-  text-align: center;
-}
-
-#work > ul > li, #about > ul > li,
-#contact > ul > li {
-  display: inline-block;
-  text-align: center;
-  margin:20px 20px;
-}
-
-.prof-pic {
-  height: 200px;
-  width: 200px;
-  border-radius: 50%;
-}
-
-.prof-pic img {
+html,
+body {
+  background-color: #000;
   height: 100%;
   width: 100%;
 }
 
-.material-icons.about {
-  font-size: 60px;
-  background-color: white;
-  color: black;
-  height: 200px;
-  width: 200px;
-  border-radius: 50%;
-  padding-top: 70px;
-
+nav {
+  background-color: rgba(0,0,0,0.3);
 }
 
-.sample1 {
-  height: 300px;
-  width: 400px;
+.navbar-fixed {
+  position: fixed;
 }
 
-.sample2 {
-  height: 250px;
-  width: 400px;
+.nav-wrapper {
+  margin: 0 !important;
 }
 
-.logo {
-  height: 100px;
-  width: 100px;
+.background-image {
+  background: url('/assets/la-skyline-elysian-park.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  position: relative;
+  opacity: 0.8;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
 }
 
-.brand {
-  padding-left: 15px;
-  height: 60px;
-  width: 80px;
+.home-container,
+.about-container,
+.projects-container {
+  height: 100%;
+  position: relative;
 }
 
-footer {
-  height: 70px;
-  background-color: white;
-  color: black;
+.contact-container {
+  margin: 0 !important;
+  position: relative;
+}
+
+.button-holder {
+  padding-top: 40px !important;
+}
+
+.header-container {
+  bottom: 0;
+  color: white;
+  left: 0;
+  margin: auto;
+  position: absolute;
   text-align: center;
-  padding-top: 20px;
+  top: 35vh;
+  right: 0;
+}
+
+.header-container h1 {
+  font-weight: 200;
+}
+
+.button-link {
+  border: 1px solid white;
+  color: white;
+  margin: 3px !important;
+  padding: 8px !important;
+}
+
+.header-container h1 span {
+  font-size: 2rem;
+  font-weight: 100;
+}
+
+.home-page-divider {
+  border-bottom: 2px dashed white;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  width: 60%;
+}
+
+.slider .slides {
+  background-color: #000 !important;
+}
+
+.about-background {
+  background: #616161;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #9bc5c3, #616161);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #9bc5c3, #616161); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+  height: 100%;
+}
+
+.social-link {
+  font-size: 3rem;
+  color: white;
+}
+
+.social-link i {
+  font-size: 5rem;
+}
+
+.about-body {
+  margin: 0 !important;
+  position: absolute;
+  top: 63px;
+  bottom: 0;
+  color: white;
+  z-index: 3;
+  width: 100%;
+}
+
+.about-body-text {
+  font-size: 1.25rem;
+}
+
+.about-content-left img {
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 815px) {
+  .social-link {
+    font-size: 2rem;
+  }
+
+  .social-link i {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .about-body-text {
+    font-size: 1.15rem;
+  }
+
+  .social-link {
+    font-size: 1.5rem;
+  }
+
+  .social-link i {
+    font-size: 2rem;
+  }
+
+
+  .home-page-divider {
+    width: 80%;
+  }
+
+  .header-container h1 {
+    font-size: 3rem;
+  }
+
+  .header-container h1 span {
+    font-size: 1.5rem;
+  }
 }

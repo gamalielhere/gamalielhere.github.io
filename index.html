@@ -1,142 +1,174 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="portfolio">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 
-  <title>Gamaliel Padillo | Junior Web Developer | Amateur Photographer</title>
+    <title> Gamaliel Padillo | Software Developer </title>
 
-  <link rel="apple-touch-icon" sizes="57x57" href="/assets/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="/assets/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="/assets/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="/assets/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="/assets/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="/assets/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="/assets/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="/assets/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
-  <link rel="manifest" href="/assets/manifest.json">
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="/assets/ms-icon-144x144.png">
-  <meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/assets/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/assets/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="manifest" href="/assets/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/assets/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 
+    <!-- Third party CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="/css/main.css">
-  <link rel="stylesheet" href="/css/responsive.css">
-</head>
-<body ng-controller="PortfolioController">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/responsive.css">
 
-
-  <div class="navbar-fixed">
-    <nav>
-      <div class="nav-wrapper">
-        <a href="#intro" class="brand-logo"><img src="http://i.imgur.com/BvNVYC0.png?1" alt="" class="brand"></a>
-        <a href="#intro" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-        <ul class="right hide-on-med-and-down">
-          <li><a href="#about">About</a></li>
-          <li><a href="#work">Work</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <ul class="side-nav" id="mobile-demo">
-          <li><a href="#about">About</a></li>
-          <li><a href="#work">Work</a></li>
-          <li><a href="#contact">Contact</a></li>
+    <!-- Third Party JS -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+    <script src="https://use.fontawesome.com/b3049a3fe8.js"></script>
+  </head>
+  <body>
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper">
+          <ul class="left right-align hide-on-med-and-down">
+            <li><a href="#home">Gamaliel Padillo</a></li>
+          </ul>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="home-container" id="home">
+      <div class="background-image"></div>
+      <div class="header-container">
+        <div class="home-page-divider"></div>
+        <h1>
+          Gamaliel Padillo <br>
+          <span> Front-end Developer | Fullstack Developer </span>
+        </h1>
+        <div class="home-page-divider"></div>
+        <div class="row container button-holder">
+          <div class="col s10 offset-s2">
+            <a href="#about" class='col s10 m3 button-link'> About </a>
+            <a href="#projects" class='col s10 m3 button-link'> Projects </a>
+            <a href="#contact" class='col s10 m3 button-link'> Contact </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="about-container" id="about">
+      <div class="about-background"></div>
+      <div class="row about-body">
+        <div class="col s12 m6 offset-m3 center-align about-content-left">
+          <img src="assets/GA headshot.jpg" alt="" width="50%">
+          <div class="col s12">
+            <p class='about-body-text'>
+              My name is Gamaliel and I'm a Web Developer for <a href="https://www.richhoneyapparel.com/" target="_blank"> Rich Honey Inc</a>, an
+              apparel company that focuses on premium quality, US made blanks,
+              helping them launch a fully custom shopify shop, and a fullstack site.
+              I am also a software engineer for <a href="https://www.oomba.com/" target="_blank">Oomba Inc.</a>,
+              a tournament management platform, as part of their internal admin team.
+            </p>
+            <p class='about-body-text'>
+              I've become enticed on being a Software Engineer because of the problem solving
+              aspect. I enjoy working with teams, learning from seasoned coders,
+              and learning programming languages and/or tactics.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="projects-container" id="projects">
+      <div class="slider">
+        <ul class="slides">
+          <li>
+            <a href="http://gamalielhere.github.io/ttt">
+              <img src="assets/StarWars-TTT-ScreenCap.png" width='100%' style='opacity: 0.6;'> <!-- random image -->
+              <div class="caption right-align">
+                <h3>Starwars TTT!</h3>
+                <h5 class="light grey-text text-lighten-3">Simple Tic-Tac-Toe game with CSS, HTML, Javascript and jQuery.</h5>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="http://gamalielhere.github.io/snake">
+              <img src="assets/Snake-ScreenCap.png" width='100%' style='opacity: 0.6;'> <!-- random image -->
+              <div class="caption center-align">
+                <h3>8-bit themed Snake</h3>
+                <h5 class="light grey-text text-lighten-3">Created with HTML, HTML canvas, CSS, Javascript and jQuery.</h5>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="https://gadit.herokuapp.com/">
+              <img src="assets/GAdit-ScreenCap.png" style='opacity: 0.6;'> <!-- random image -->
+              <div class="caption right-align">
+                <h3>GAdit</h3>
+                <h5 class="light grey-text text-lighten-3">
+                  A web app parody of reddit. Created with Ruby on Rails.
+                </h5>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="https://park-here-app.herokuapp.com/">
+              <img src="assets/ParkHere-ScreenCap.png" style='opacity: 0.6;'> <!-- random image -->
+              <div class="caption center-align">
+                <h3>Park Here!</h3>
+                <h5 class="light grey-text text-lighten-3">
+                  Web app that let's user comment on restaurants about the parking situation of the area.
+                  Created with the MEAN stack and huge help from Yelp's API.
+                </h5>
+              </div>
+            </a>
+          </li>
         </ul>
       </div>
-    </nav>
-  </div>
-
-  <div class="parallax-container" id="intro">
-    <h3>Web development and Photography</h3>
-    <p>Displaying the apps that I've built and the photos that I've taken.. <br>
-       Welcome to my portfolio!
-    </p>
-  </div>
-
-  <div id="about" class="content">
-    <ul>
-      <li>
-        <div>
-          <img class="prof-pic" src="http://i.imgur.com/BqwbE1b.jpg?2" alt="">
-          <p>
-            I'm Gamaliel (Yel for short), a Jr. Developer who just graduated from General Assembly's <br>
-            WDI course, 21 y.o, with a passion in learning new things, programming, <br>
-            and photography.
-          </p>
-        </div>
-      </li>
-      <li>
-        <i class="material-icons about">code</i>
-        <p>I have hands on experience on Javascript/jQuery, HTML, CSS, MEAN stack,Ruby, Ruby on Rails, git and github.<br>
-           I aim to grow as a developer and further my knowledge and skills in the field.</p>
-      </li>
-      <li>
-        <i class="material-icons about">thumb_up</i>
-        <p>I tend to find the positive in a negative situation by laughing.</p>
-      </li>
-    </ul>
-  </div>
-
-  <div class="parallax-container">
-    <div class="parallax"><img src="http://i.imgur.com/0UkQ6dE.jpg">
-
     </div>
-  </div>
-  <div id="work" class="content">
-    <ul>
-      <li>
-        <div>
-          <a href="http://gamalielhere.github.io/ttt"><img src="http://i.imgur.com/9FFgu0I.png" alt="" class="sample1"></a>
-          <h3>Jedi Tic-Tac-Toe</h3>
-          <p>Built with HTML/CSS, vanilla Javascript, and small amount of jQuery/jQueryUI</p>
-        </div>
-      </li>
-      <li>
-        <a href="http://gamalielhere.github.io/snake"><img src="http://i.imgur.com/bJZMrbL.png" alt="" class="sample2"></a>
-        <h3>SNAKE!</h3>
-        <p>Classic game built with HTML/CSS, Javascript/jQuery</p>
-      </li>
-      <li>
-        <a href="https://gadit.herokuapp.com"><img src="http://i.imgur.com/bUUJIGG.png" alt="" class="sample2"></a>
-        <h3>GAdit</h3>
-        <p>An imitation of Reddit. Built with SQL, PostgreSQL, Ruby on Rails, Rails, HTML, CSS and Bootstrap</p>
-      </li>
-    </ul>
-  </div>
-
-  <div class="parallax-container">
-    <div class="parallax"><img src="http://i.imgur.com/0UkQ6dE.jpg">
-
+    <div class="contact-container row" id="contact">
+      <div class="col s12 center-align">
+        <h5 class="light grey-text text-lighten-3">
+          Connect with me:
+        </h5>
+      </div>
+      <div class="col s10 offset-s2 center container">
+        <a href="https://www.github.com/gamalielhere" class='col s2 social-link'>
+          <i class='fa fa-github'></i>
+        </a>
+        <a href="mailto:gamalielgad1234@gmail.com" class='col s2 social-link'>
+          <i class='fa fa-envelope-o'></i>
+        </a>
+        <a href="https://www.linkedin.com/in/gamalielpadillo" class='col s2 social-link'>
+          <i class='fa fa-linkedin'></i>
+        </a>
+        <a href="https://www.twitter.com/gamalielhere" class='col s2 social-link'>
+          <i class='fa fa-twitter'></i>
+        </a>
+        <a href="https://gist.github.com/gamalielhere" class='col s2 social-link'>
+          <i class='fa fa-github-alt'></i>
+        </a>
+      </div>
+      <div class="col s12 light grey-text text-lighten-3 center-align"> Ⓒ Gamaliel Padillo, 2017</div>
     </div>
-  </div>
-
-  <div class="parallax-container" id="contact" class="content">
-    <ul>
-      <h3>Want more? Check me out here: </h3>
-      <li><a href="http://www.instagram.com/gamalielhere"><img class="logo" src="http://www.csus.edu/coe/academics/doctorate/images/instagram%20round.png" alt=""></a></li>
-      <li><a href="http://www.linkedin.com/in/gamalielpadillo"><img class="logo" src="http://icons.iconarchive.com/icons/sicons/basic-round-social/512/linkedin-icon.png" alt=""></a></li>
-      <li><a href="http://www.twitter.com/gamalielhere"><img class="logo" src="http://www.uco.edu/central/passport/files/images/img/%20twitter-round-icon.png" alt=""></a></li>
-      <li><a href="mailto:gamalielgad1234@gmail.com"><img class="logo" src="https://cdn3.iconfinder.com/data/icons/complete-set-icons/512/mail512x512.png" alt=""></a></li>
-      <li><a href="http://www.github.com/gamalielhere"><img class="logo" src="https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-256.png" alt=""></a></li>
-    </ul>
-  </div>
-
-
-  <footer>© 2016 Gamaliel Padillo</footer>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
-  <script src="/js/app.module.js"></script>
-  <script src="/js/app.services.js"></script>
-  <script src="/js/app.controllers.js"></script>
-  <script src="/js/main.js"></script>
-</body>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+  </body>
 </html>
