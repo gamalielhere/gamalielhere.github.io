@@ -1,6 +1,6 @@
 html,
 body {
-  background-color: #000;
+  background-color: #111;
   height: 100%;
   width: 100%;
 }
@@ -34,14 +34,17 @@ nav {
 }
 
 .home-container,
-.about-container,
-.projects-container {
+.about-container {
   height: 100%;
   position: relative;
 }
 
 .contact-container {
-  background-color: #111;
+  background: url('/assets/la-skyline-elysian-park.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   margin: 0 !important;
   position: relative;
 }
@@ -52,7 +55,7 @@ nav {
 
 .header-container {
   bottom: 0;
-  color: white;
+  color: #ddd;
   left: 0;
   margin: auto;
   position: absolute;
@@ -66,8 +69,8 @@ nav {
 }
 
 .button-link {
-  border: 1px solid white;
-  color: white;
+  border: 1px solid #ddd;
+  color: #ddd;
   margin: 3px !important;
   padding: 8px !important;
 }
@@ -78,7 +81,7 @@ nav {
 }
 
 .home-page-divider {
-  border-bottom: 2px dashed white;
+  border-bottom: 2px dashed #ddd;
   left: 0;
   margin: 0 auto;
   position: absolute;
@@ -87,7 +90,7 @@ nav {
 }
 
 .slider .slides {
-  background-color: #000 !important;
+  background-color: #111 !important;
 }
 
 .about-background {
@@ -104,7 +107,7 @@ nav {
 
 .social-link {
   font-size: 3rem;
-  color: white;
+  color: #ddd;
 }
 
 .social-link i {
@@ -116,7 +119,7 @@ nav {
   position: absolute;
   top: 63px;
   bottom: 0;
-  color: white;
+  color: #ddd;
   z-index: 3;
   width: 100%;
 }
@@ -127,6 +130,14 @@ nav {
 
 .about-content-left img {
   border-radius: 50%;
+}
+
+.projects-container {
+  height: auto;
+}
+
+.projects-container a {
+  color: #ddd;
 }
 
 @media screen and (max-width: 815px) {
@@ -142,6 +153,14 @@ nav {
 @media screen and (max-width: 600px) {
   .about-body-text {
     font-size: 1rem;
+  }
+
+  .details-container h3 {
+    font-size: 2rem !important;
+  }
+
+  .details-container h5 {
+    font-size: 1rem !important;
   }
 
   .social-link {
@@ -167,9 +186,5 @@ nav {
 
   .header-container h1 span {
     font-size: 1.5rem;
-  }
-
-  .projects-container {
-    overflow: hidden;
   }
 }

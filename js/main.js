@@ -1,8 +1,8 @@
 $(document).ready(function(){
-  $('.slider').slider({
-    height: $('.projects-container').height(),
-    indicators: false,
-    interval: 5000
+  $('.slick-container').slick({
+    arrows: false,
+    speed: 300,
+    slidesToShow: 1
   });
 
   $(".button-collapse").sideNav({
