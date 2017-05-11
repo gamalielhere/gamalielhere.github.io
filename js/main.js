@@ -4,4 +4,10 @@ $(document).ready(function(){
     indicators: false,
     interval: 5000
   });
+
+  $(".button-collapse").sideNav({
+    menuWidth: 200, // Default is 300
+    closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+    draggable: true
+  });
 });
