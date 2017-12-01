@@ -6,7 +6,7 @@ body {
 }
 
 nav {
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .navbar-fixed {
@@ -18,7 +18,8 @@ nav {
 }
 
 .background-image {
-  background: url('/assets/la-skyline-elysian-park.jpg') no-repeat center center fixed;
+  background: url("/assets/la-skyline-elysian-park.jpg") no-repeat center center
+    fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -40,7 +41,8 @@ nav {
 }
 
 .contact-container {
-  background: url('/assets/la-skyline-elysian-park.jpg') no-repeat center center fixed;
+  background: url("/assets/la-skyline-elysian-park.jpg") no-repeat center center
+    fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -94,9 +96,17 @@ nav {
 }
 
 .about-background {
-  background: #616161;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #9bc5c3, #616161);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #9bc5c3, #616161); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #616161; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #9bc5c3,
+    #616161
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #9bc5c3,
+    #616161
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   -webkit-filter: blur(5px);
   -moz-filter: blur(5px);
   -o-filter: blur(5px);
@@ -171,7 +181,6 @@ nav {
     font-size: 2rem;
   }
 
-
   .home-page-divider {
     width: 80%;
   }
@@ -186,5 +195,15 @@ nav {
 
   .header-container h1 span {
     font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 996px) and (max-width: 1440px) {
+  .card-content {
+    height: 200px !important;
+  }
+
+  .card-image {
+    height: 180px !important;
   }
 }
