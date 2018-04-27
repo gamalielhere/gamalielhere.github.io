@@ -1,5 +1,3 @@
-### My portfolio site
+### Portfolio site
 
-# Tech used:
-
-GitHub, MaterializeCSS, HTML and CSS
+This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
