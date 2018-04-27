@@ -1,0 +1,9 @@
+{
+  "name": "Portfolio",
+  "version": "0.0.1",
+  "repository": "git@github.com:gamalielhere/gamalielhere.github.io.git",
+  "author": "<gamalielgad1234@gmail.com>",
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {}
+}
