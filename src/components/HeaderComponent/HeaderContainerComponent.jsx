@@ -30,7 +30,7 @@ class HeaderContainerComponent extends PureComponent {
         <AppBar position="static">
           <Toolbar>
             <Link to='/' className={classes.iconContainer}>
-              <img src={logo} className={classes.icon}/>
+              <img src={logo} className={classes.icon} alt="Site logo"/>
             </Link>
             <div >
               <Button component={Link} to="/" className={classes.buttonTemp}>
