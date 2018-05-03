@@ -1,1 +1,1 @@
-export {default} from "./FooterContainerComponent";
+export {default} from "./FooterComponent";
