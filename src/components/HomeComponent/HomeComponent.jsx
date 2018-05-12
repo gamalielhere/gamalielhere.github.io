@@ -14,6 +14,13 @@ const classes = {
     position: "relative",
     zIndex: "3"
   },
+  homeBorder: {
+    borderBottom: "2px dashed white",
+    width: "60%"
+  },
+  homeText: {
+    padding: "25px 0"
+  },
   homeButtons: {
     justifyContent: "space-around",
     display: "flex",
@@ -22,14 +29,20 @@ const classes = {
     width: "60%",
     "@media screen and (max-width: 500px)": {
       flexDirection: "column",
-      height: "20%",
-      padding: "0"
+      height: "20%"
+    },
+    "@media screen and (max-width: 960px)": {
+      width: "75%"
     }
   },
   homeButton: {
-    border: "1px solid rgba(0, 0, 0, 0.5)",
-    backgroundColor: "rgba(0,0,0,0.7)",
-    color: "#EEEEEE"
+    border: "1px solid #eee",
+    backgroundColor: "rgba(0,0,0,0.0)",
+    color: "#EEE",
+    minWidth: "150px"
+  },
+  homeTextColor: {
+    color: "#EEE"
   },
   homeBackground: {
     backgroundImage: `url(${elysian})`,
@@ -37,6 +50,7 @@ const classes = {
     filter: "blur(3px)",
     height: "100%",
     position: "absolute",
+    opacity: "0.8",
     top: "0",
     width: "100%",
     zIndex: "1"
@@ -48,8 +62,24 @@ class HomeComponent extends PureComponent {
     return (
       <div className="pageContainer">
         <div className={classes.homeContainer}>
-          <Typography variant="display2">Gamaliel Padillo</Typography>
-          <Typography variant="headline">Full-stack Developer</Typography>
+          <div className={classes.homeBorder} />
+          <div className={classes.homeText}>
+            <Typography
+              variant="display3"
+              className={classes.homeTextColor}
+              align="center"
+              color="inherit">
+              Gamaliel Padillo
+            </Typography>
+            <Typography
+              variant="headline"
+              className={classes.homeTextColor}
+              align="center"
+              color="inherit">
+              Frontend Developer | Full-stack Developer
+            </Typography>
+          </div>
+          <div className={classes.homeBorder} />
           <div className={classes.homeButtons}>
             <Button
               className={classes.homeButton}

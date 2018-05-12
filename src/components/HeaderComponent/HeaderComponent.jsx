@@ -8,7 +8,9 @@ import logo from "../../assets/ms-icon-310x310.png";
 
 const classes = {
   root: {
-    flexGrow: 1
+    flexGrow: 1,
+    position: 'relative',
+    zIndex: 2
   },
   icon: {
     width: "50px",
@@ -19,6 +21,9 @@ const classes = {
   },
   buttonTemp: {
     color: 'white'
+  },
+  appBar: {
+    backgroundColor: "rgba(0,0,0,0.7)"
   }
 };
 
@@ -27,7 +32,7 @@ class HeaderComponent extends PureComponent {
     const { classes } = this.props;
     return (
       <div className={classes.root}>
-        <AppBar position="static">
+        <AppBar position="static" className={classes.appBar}>
           <Toolbar>
             <Link to='/' className={classes.iconContainer}>
               <img src={logo} className={classes.icon} alt="Site logo"/>
