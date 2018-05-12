@@ -1,13 +1,14 @@
 import React, { PureComponent } from "react";
 import { withStyles } from "material-ui/styles";
-import grey from 'material-ui/colors/grey';
 
 const classes = {
   footerContainer: {
-    backgroundColor: grey[900],
-    textAlign: "center",
+    backgroundColor: "rgba(0,0,0,0.7)",
+    color: '#fff',
     padding: '10px 0',
-    color: '#fff'
+    position: 'relative',
+    textAlign: "center",
+    zIndex: 2
   }
 };
 class FooterComponent extends PureComponent {
