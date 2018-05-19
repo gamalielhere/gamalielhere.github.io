@@ -1,5 +1,5 @@
-import CssBaseline from "material-ui/CssBaseline";
-import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import MuiThemeProvider from "@material-ui/core/styles/MuiThemeProvider";
 import React, { PureComponent } from "react";
 import { Route, Switch, withRouter } from "react-router-dom";
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
