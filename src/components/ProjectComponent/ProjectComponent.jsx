@@ -1,23 +1,25 @@
 import React, { PureComponent } from "react";
-import { withStyles } from '@material-ui/core/styles';
+import { withStyles } from "@material-ui/core/styles";
 import ProjectContainer from "./ProjectContainerComponent";
 import gadit from "../../assets/GAdit.png";
 import parkhere from "../../assets/ParkHere.png";
 import snake from "../../assets/Snake.png";
 import starwarsttt from "../../assets/StarWars-TTT.png";
-import classNames from 'classnames';
+import classNames from "classnames";
 
 const styles = {
   root: {
-    "display": "flex",
-    "justifyContent": "space-around",
-    "alignItems": "center"
+    alignItems: "center",
+    backgroundColor: "#eee",
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "space-around"
   }
-}
+};
 
 class ProjectComponent extends PureComponent {
   render() {
-    const {classes} = this.props;
+    const { classes } = this.props;
     const data = [
       {
         name: "StarWars Tic-Tac-Toe",
@@ -36,9 +38,16 @@ class ProjectComponent extends PureComponent {
       {
         name: "GAdit",
         description1: `Reddit parody website that lets users Create, Read, Update and Delete data.`,
-        description2: `This is a fullstack web app built on with Ruby on Rails, HTML, ERB, Javascript, jQuery, SCSS, Ruby, PostgreSQL, and shipped in Heroku.`,
+        description2: `This is a fullstack web app built with Ruby on Rails, HTML, ERB, Javascript, jQuery, SCSS, Ruby, PostgreSQL, and shipped in Heroku.`,
         img: gadit,
         link: "https://gadit.herokuapp.com"
+      },
+      {
+        name: "ParkHere",
+        description1: `ParkHere is a parking app that lets users inform other users what the parking situation of a restaurant is.`,
+        description2: `This is a fullstack web app built with NodeJS, HTML, Javascript, AngularJS, SCSS, ExpressJS, MongoDB, Yelp API v2, and shipped in Heroku.`,
+        img: parkhere,
+        link: "https://park-here-app.herokuapp.com/#/"
       }
     ];
     return (
