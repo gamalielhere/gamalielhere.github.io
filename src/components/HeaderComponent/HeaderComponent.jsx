@@ -1,7 +1,7 @@
 import React, { PureComponent } from "react";
 import { withStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 import Button from "@material-ui/core/Button";
 import Toolbar from "@material-ui/core/Toolbar";
 import logo from "../../assets/ms-icon-310x310.png";
@@ -9,7 +9,7 @@ import logo from "../../assets/ms-icon-310x310.png";
 const classes = {
   root: {
     flexGrow: 1,
-    position: 'relative',
+    position: "relative",
     zIndex: 2
   },
   icon: {
@@ -20,7 +20,7 @@ const classes = {
     flex: 1
   },
   buttonTemp: {
-    color: 'white'
+    color: "white"
   },
   appBar: {
     backgroundColor: "rgba(0,0,0,0.7)"
@@ -34,20 +34,29 @@ class HeaderComponent extends PureComponent {
       <div className={classes.root}>
         <AppBar position="static" className={classes.appBar}>
           <Toolbar>
-            <Link to='/' className={classes.iconContainer}>
-              <img src={logo} className={classes.icon} alt="Site logo"/>
+            <Link to="/" className={classes.iconContainer}>
+              <img src={logo} className={classes.icon} alt="Site logo" />
             </Link>
-            <div >
+            <div>
               <Button component={Link} to="/" className={classes.buttonTemp}>
                 Home
               </Button>
-              <Button component={Link} to="/projects" className={classes.buttonTemp}>
+              <Button
+                component={Link}
+                to="/projects"
+                className={classes.buttonTemp}>
                 Projects
               </Button>
-              <Button component={Link} to="/about" className={classes.buttonTemp}>
+              <Button
+                component={Link}
+                to="/about"
+                className={classes.buttonTemp}>
                 About
               </Button>
-              <Button component={Link} to="/connect" className={classes.buttonTemp}>
+              <Button
+                component={Link}
+                to="/connect"
+                className={classes.buttonTemp}>
                 Connect
               </Button>
             </div>

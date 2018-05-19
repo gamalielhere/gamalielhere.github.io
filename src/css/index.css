@@ -10,4 +10,5 @@ body {
 
 .pageContainer {
   height: calc(100vh - 102px);
+  overflow-y: scroll;
 }
