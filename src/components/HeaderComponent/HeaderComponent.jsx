@@ -1,9 +1,9 @@
 import React, { PureComponent } from "react";
-import { withStyles } from "material-ui/styles";
-import AppBar from "material-ui/AppBar";
+import { withStyles } from "@material-ui/core/styles";
+import AppBar from "@material-ui/core/AppBar";
 import { Link } from 'react-router-dom'
-import Button from "material-ui/Button";
-import Toolbar from "material-ui/Toolbar";
+import Button from "@material-ui/core/Button";
+import Toolbar from "@material-ui/core/Toolbar";
 import logo from "../../assets/ms-icon-310x310.png";
 
 const classes = {
