@@ -56,4 +56,4 @@ workflows:
       - deploy_production:
           filters:
             branches:
-              only: master
+              only: develop
