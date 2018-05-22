@@ -12,9 +12,7 @@ jobs:
       - run:
           name: Set user info
           command: git config --global user.email "gamalielgad1234@gmail.com"; git config --global user.name "Yel CircleCi"
-      - run:
-          name: checkout and pull develop
-          command: git checkout develop; git pull origin develop
+      - checkout
       - run:
           name: delete files in master
           command: git checkout master; git rm -rf *; git push master; git checkout develop
