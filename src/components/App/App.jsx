@@ -28,12 +28,10 @@ class App extends PureComponent {
               mountOnEnter={true}
               unmountOnExit={true}>
               <Switch location={location}>
-                <Route exact path="/home" component={HomeComponent} />
+                <Route exact path="/" component={HomeComponent} />
                 <Route exact path="/projects" component={ProjectComponent} />
                 <Route exact path="/about" component={AboutComponent} />
                 <Route exact path="/connect" component={ConnectComponent} />
-                <Redirect from="/" to="home"/>
-                <Redirect from="/portfolio" to="home"/>
               </Switch>
             </CSSTransition>
           </TransitionGroup>
