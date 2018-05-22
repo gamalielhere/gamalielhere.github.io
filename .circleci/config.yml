@@ -9,6 +9,9 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             - "af:ba:7d:a2:eb:a7:4e:db:1d:8d:0a:e6:5c:60:19:b5"
+      - set_user:
+        name: Set user info
+        command: git config --global user.email "gamalielgad1234@gmail.com"; git config --global user.name "Yel CircleCi"
       - checkout
       - restore_cache:
           key: portfolio-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
