@@ -1,32 +1,7 @@
 version: 2
 jobs:
-  test:
+  deploy_production:
     working_directory: ~/portfolio
-
-    docker:
-      - image: circleci/node:8.9
-
-    steps:
-      - checkout
-      - restore_cache:
-          keys:
-          - portfolio-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
-          - portfolio-{{ checksum "package.json" }}
-          - portfolio-
-      - run:
-          name: Install NPM Dependencies
-          command: yarn install
-      - save_cache:
-          key: portfolio-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
-          paths:
-            - node_modules
-      - store_test_results:
-          path: /tmp/test-results
-      - store_artifacts:
-          path: /tmp/test-results
-deploy_production:
-    working_directory: ~/portfolio
-
     docker:
       - image: circleci/node:8.9
 
@@ -45,9 +20,9 @@ deploy_production:
           name: Build React Application
           command: yarn build
       # TODO: Deploy build folder to master.
-      # - deploy:
-      #     name: Deploy "develop" to Firebase Application "portfolio-production"
-      #     command: firebase deploy -P production --token "$FIREBASE_TOKEN" --non-interactive
+      - deploy:
+          name: Deploy dist folder to master branch
+          command: git subtree push --prefix dist origin gh-pages
 
 workflows:
   version: 2
