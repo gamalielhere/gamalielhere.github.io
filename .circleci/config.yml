@@ -24,10 +24,10 @@ jobs:
             - node_modules
       - run:
           name: Build React Application
-          command: yarn build 
+          command: yarn build
       - deploy:
           name: Deploy dist folder to master branch
-          command: git add ./build -f; git commit -m "Deploy to master"; git subtree push --prefix build origin master
+          command: git add ./build -f; git commit -m "Deploy to master"; git push origin `git subtree push --prefix build origin master` --force
 
 workflows:
   version: 2
