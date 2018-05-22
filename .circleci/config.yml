@@ -21,7 +21,7 @@ jobs:
           command: yarn build
       - add_ssh_keys:
           fingerprints:
-            - $SSH_ENV
+            - "af:ba:7d:a2:eb:a7:4e:db:1d:8d:0a:e6:5c:60:19:b5"
       - deploy:
           name: Deploy dist folder to master branch
           command: git add ./build -f; git commit -m "Deploy to master"; git subtree push --prefix build origin master
