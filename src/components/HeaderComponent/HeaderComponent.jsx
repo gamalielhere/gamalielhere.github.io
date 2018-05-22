@@ -34,11 +34,11 @@ class HeaderComponent extends PureComponent {
       <div className={classes.root}>
         <AppBar position="static" className={classes.appBar}>
           <Toolbar>
-            <Link to="/" className={classes.iconContainer}>
+            <Link to="/home" className={classes.iconContainer}>
               <img src={logo} className={classes.icon} alt="Site logo" />
             </Link>
             <div>
-              <Button component={Link} to="/" className={classes.buttonTemp}>
+              <Button component={Link} to="/home" className={classes.buttonTemp}>
                 Home
               </Button>
               <Button

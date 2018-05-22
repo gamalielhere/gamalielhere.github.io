@@ -1,7 +1,7 @@
 import CssBaseline from "@material-ui/core/CssBaseline";
 import MuiThemeProvider from "@material-ui/core/styles/MuiThemeProvider";
 import React, { PureComponent } from "react";
-import { Route, Switch, withRouter } from "react-router-dom";
+import { Route, Switch, withRouter, Redirect } from "react-router-dom";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import theme from "../../config/theme.js";
 import AboutComponent from "../AboutComponent";
@@ -28,10 +28,12 @@ class App extends PureComponent {
               mountOnEnter={true}
               unmountOnExit={true}>
               <Switch location={location}>
-                <Route exact path="/" component={HomeComponent} />
+                <Route exact path="/home" component={HomeComponent} />
                 <Route exact path="/projects" component={ProjectComponent} />
                 <Route exact path="/about" component={AboutComponent} />
                 <Route exact path="/connect" component={ConnectComponent} />
+                <Redirect from="/" to="home"/>
+                <Redirect from="/portfolio" to="home"/>
               </Switch>
             </CSSTransition>
           </TransitionGroup>
