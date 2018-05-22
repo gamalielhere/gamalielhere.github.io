@@ -13,6 +13,11 @@ jobs:
           name: Set user info
           command: git config --global user.email "gamalielgad1234@gmail.com"; git config --global user.name "Yel CircleCi"
       - checkout
+          name: checkout develop
+          command: git pull origin develop
+      - run:
+          name: delete files in master
+          command: git checkout master; git rm -rf *; git push master; git checkout develop
       - restore_cache:
           key: portfolio-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
       - run:
