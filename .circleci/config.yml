@@ -22,7 +22,7 @@ jobs:
       # TODO: Deploy build folder to master.
       - deploy:
           name: Deploy dist folder to master branch
-          command: git subtree push --prefix dist origin gh-pages
+          command: git subtree push --prefix dist origin master
 
 workflows:
   version: 2
