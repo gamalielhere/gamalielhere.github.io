@@ -27,7 +27,7 @@ jobs:
           command: yarn build
       - deploy:
           name: Deploy dist folder to master branch
-          command: git subtree split --prefix build -b master; git push -f origin gh-pages:gh-pages; git branch -D master;
+          command: git subtree split --prefix build -b master; git push -f origin master:master; git branch -D master;
 
 workflows:
   version: 2
