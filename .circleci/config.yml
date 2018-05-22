@@ -27,7 +27,7 @@ jobs:
           command: yarn build
       - deploy:
           name: Deploy dist folder to master branch
-          command: git add ./build -f; git commit -m "Deploy to master"; git push origin `git subtree split --prefix build origin master`:production --force
+          command: git add ./build -f; git commit -m "Deploy to master"; git push origin `git subtree split --prefix build origin master`:master --force
 
 workflows:
   version: 2
