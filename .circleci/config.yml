@@ -27,7 +27,7 @@ jobs:
           command: yarn build
       - run:
           name: Copy CNAME over
-          command: ls -a | sort; cp CNAME build/
+          command: cp CNAME build/; ls -a build/
       - deploy:
           name: Deploy dist folder to master branch
           command: git add ./build; git commit -m "Deploy to master"; git push origin `git subtree split --prefix build origin master`:master --force
