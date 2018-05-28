@@ -27,7 +27,7 @@ jobs:
           command: yarn build
       - deploy:
           name: Deploy dist folder to master branch
-          command: yarn deploy
+          command: mv CNAME ./build; yarn deploy
 
 workflows:
   version: 2
@@ -36,4 +36,4 @@ workflows:
       - deploy_production:
           filters:
             branches:
-              only: develop
+              only: master
