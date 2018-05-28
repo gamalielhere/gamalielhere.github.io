@@ -25,12 +25,9 @@ jobs:
       - run:
           name: Build React Application
           command: yarn build
-      - run:
-          name: Copy CNAME over
-          command: cp CNAME build/;
       - deploy:
           name: Deploy dist folder to master branch
-          command: git add ./build; git commit -m "Deploy to master"; git push origin master -f
+          command: yarn deploy
 
 workflows:
   version: 2
