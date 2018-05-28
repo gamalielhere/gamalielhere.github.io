@@ -30,7 +30,7 @@ jobs:
           command: cp CNAME build/
       - deploy:
           name: Deploy dist folder to master branch
-          command: git subtree split --prefix build origin master
+          command: git add ./build; git commit -m "Deploy to master"; git push origin `git subtree split --prefix build origin master`:master --force
 
 workflows:
   version: 2
