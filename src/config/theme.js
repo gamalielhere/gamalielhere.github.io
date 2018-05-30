@@ -8,6 +8,15 @@ const theme = createMuiTheme({
     primary: blueGrey,
     secondary: grey,
     error: red
+  },
+  typography: {
+    fontFamily: [
+      'Special Elite',
+      'Roboto',
+      'sans-serif',
+      'Helvetica Neue',
+      'Arial'
+    ]
   }
 });
 

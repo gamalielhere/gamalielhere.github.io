@@ -1,5 +1,6 @@
 import React, { PureComponent } from "react";
 import { withStyles } from "@material-ui/core/styles";
+import Typography from "@material-ui/core/Typography";
 
 const classes = {
   footerContainer: {
@@ -15,7 +16,9 @@ class FooterComponent extends PureComponent {
   render() {
     const { classes } = this.props;
     return (
-      <div className={classes.footerContainer}>© 2018 Gamaliel Padillo </div>
+      <div className={classes.footerContainer}>
+        <Typography variant="subheading" color="inherit"> © 2018 Gamaliel Padillo </Typography>
+      </div>
     );
   }
 }
