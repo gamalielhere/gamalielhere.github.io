@@ -1,11 +1,16 @@
 {
-  "main.css": "static/css/main.1e78df3c.css",
-  "main.css.map": "static/css/main.1e78df3c.css.map",
-  "main.js": "static/js/main.c647ffbf.js",
-  "main.js.map": "static/js/main.c647ffbf.js.map",
+  "main.css": "static/css/main.84f999a6.css",
+  "main.css.map": "static/css/main.84f999a6.css.map",
+  "main.js": "static/js/main.d1a2ad4e.js",
+  "main.js.map": "static/js/main.d1a2ad4e.js.map",
   "static/media/GAdit.png": "static/media/GAdit.83d354f7.png",
   "static/media/ParkHere.png": "static/media/ParkHere.dfd8a80e.png",
   "static/media/StarWars-TTT.png": "static/media/StarWars-TTT.c5937d20.png",
+  "static/media/black-and-white-echo-park.jpg": "static/media/black-and-white-echo-park.92184b2e.jpg",
+  "static/media/car.jpg": "static/media/car.d0394d85.jpg",
+  "static/media/gamalielpadillo.JPG": "static/media/gamalielpadillo.e33e0db0.JPG",
+  "static/media/gamalielpadillo.pdf": "static/media/gamalielpadillo.cfe55c84.pdf",
   "static/media/la-skyline-elysian-park.jpg": "static/media/la-skyline-elysian-park.dc94cecc.jpg",
+  "static/media/la-skyline.jpg": "static/media/la-skyline.f40a5974.jpg",
   "static/media/ms-icon-310x310.png": "static/media/ms-icon-310x310.4165efb8.png"
 }
