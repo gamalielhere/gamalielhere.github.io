@@ -27,9 +27,10 @@ const classes = {
     flexDirection: "row",
     padding: "25px 0 0 0",
     width: "60%",
-    "@media screen and (max-width: 500px)": {
+    "@media screen and (max-width: 600px)": {
       flexDirection: "column",
-      height: "20%"
+      height: "30%",
+      justifyContent: "space-between"
     },
     "@media screen and (max-width: 960px)": {
       width: "75%"
@@ -59,6 +60,21 @@ const classes = {
 class HomeComponent extends PureComponent {
   render() {
     const { classes } = this.props;
+    const links = [
+      {
+        link: "/projects",
+        text: "Projects"
+      },
+      {
+        link: "/about",
+        text: "About"
+      },
+      {
+        link: "/connect",
+        text: "Connect"
+      }
+    ];
+
     return (
       <div className="pageContainer">
         <div className={classes.homeContainer}>
@@ -81,21 +97,15 @@ class HomeComponent extends PureComponent {
           </div>
           <div className={classes.homeBorder} />
           <div className={classes.homeButtons}>
-            <Button
-              className={classes.homeButton}
-              component={Link}
-              to="/projects">
-              Projects
-            </Button>
-            <Button className={classes.homeButton} component={Link} to="/about">
-              About
-            </Button>
-            <Button
-              className={classes.homeButton}
-              component={Link}
-              to="/connect">
-              Connect
-            </Button>
+            {
+              links.map((item, idx) => {
+                return (
+                  <Button component={Link} to={item.link} className={classes.homeButton} key={item.text+idx}>
+                    {item.text}
+                  </Button>
+                )
+              })
+            }
           </div>
         </div>
         <div className={classes.homeBackground} />

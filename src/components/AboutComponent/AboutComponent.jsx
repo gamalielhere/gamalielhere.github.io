@@ -7,6 +7,9 @@ import className from "classnames";
 import mypic from "../../assets/gamalielpadillo.JPG";
 import echoPark from "../../assets/black-and-white-echo-park.jpg";
 import laSkyline from "../../assets/la-skyline.jpg";
+import gamalielpadillo from "../../assets/gamalielpadillo.pdf";
+import car from "../../assets/car.jpg";
+import classNames from "classnames";
 
 const classes = {
   root: {
@@ -37,7 +40,11 @@ const classes = {
     display: "flex",
     padding: "15px 0",
     flexDirection: "row",
-    justifyContent: "space-around"
+    justifyContent: "space-around",
+    "@media screen and (max-width: 600px)": {
+      flexDirection: "column",
+      justifyContent: "space-between"
+    },
   },
   greeting: {
     backgroundColor: "#fff",
@@ -86,6 +93,18 @@ const classes = {
     top: "0",
     width: "100%",
     zIndex: "1"
+  },
+  backgroundResume: {
+    backgroundImage: `url(${car})`,
+    backgroundSize: "cover",
+    height: "100%",
+    position: "absolute",
+    top: "0",
+    width: "100%",
+    zIndex: "1"
+  },
+  downloadResume: {
+    height: 100
   }
 };
 
@@ -128,6 +147,12 @@ class AboutComponent extends PureComponent {
                 <div className={classes.backgroundConnect}></div>
               </div>
             </div>
+          </div>
+          <div className={classNames(classes.linkContainer, classes.downloadResume)}>
+            <Button component={"a"} href={gamalielpadillo} className={classes.linkButton} download>
+              <Typography variant="subheading" align="center" className={classes.linkText}> My Resume </Typography>
+            </Button>
+            <div className={classes.backgroundResume}></div>
           </div>
         </div>
       </div>
