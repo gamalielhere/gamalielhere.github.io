@@ -8,6 +8,6 @@ body {
 }
 
 .pageContainer {
-  height: calc(100vh - 102px);
+  height: calc(100vh - 108px);
   overflow-y: scroll;
 }
