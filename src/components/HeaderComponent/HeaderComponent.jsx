@@ -112,7 +112,7 @@ class HeaderComponent extends PureComponent {
           {
             links.map((item, idx) => {
               return (
-                <Button component={Link} to={item.link} className={classes.drawerLinks} key={item.text+idx+"Drawer"}>
+                <Button component={Link} to={item.link} className={classes.drawerLinks} key={item.text+idx+"Drawer"} onClick={this.openDrawer}>
                   {item.text}
                 </Button>
               )
