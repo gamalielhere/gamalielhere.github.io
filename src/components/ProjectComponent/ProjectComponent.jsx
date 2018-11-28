@@ -26,14 +26,14 @@ class ProjectComponent extends PureComponent {
         description1: `Simple StarWars themed Tic Tac Toe game`,
         description2: `This game is created with HTML5, CSS, Javascript, and jQuery`,
         img: starwarsttt,
-        link: "https://gamalielhere.github.io/ttt"
+        link: "http://www.gamalielpadillo.com/ttt/"
       },
       {
         name: "Snake!",
         description1: `Retro Snake game from the old days when we didn't have iPhones now on a website!`,
         description2: `This game is created with HTML5, CSS, Javascript, HTML5 Canvas, and Firebase for it's Database.`,
         img: snake,
-        link: "https://gamalielhere.github.io/snake"
+        link: "http://www.gamalielpadillo.com/snake/"
       },
       {
         name: "GAdit",
