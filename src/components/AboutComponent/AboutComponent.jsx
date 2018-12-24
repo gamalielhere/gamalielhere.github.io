@@ -7,8 +7,6 @@ import className from "classnames";
 import mypic from "../../assets/gamalielpadillo.JPG";
 import echoPark from "../../assets/black-and-white-echo-park.jpg";
 import laSkyline from "../../assets/la-skyline.jpg";
-import gamalielpadillo from "../../assets/gamalielpadillo.pdf";
-import car from "../../assets/car.jpg";
 
 const classes = {
   root: {
