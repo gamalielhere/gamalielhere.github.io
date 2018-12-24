@@ -9,7 +9,6 @@ import echoPark from "../../assets/black-and-white-echo-park.jpg";
 import laSkyline from "../../assets/la-skyline.jpg";
 import gamalielpadillo from "../../assets/gamalielpadillo.pdf";
 import car from "../../assets/car.jpg";
-import classNames from "classnames";
 
 const classes = {
   root: {
@@ -93,18 +92,6 @@ const classes = {
     top: "0",
     width: "100%",
     zIndex: "1"
-  },
-  backgroundResume: {
-    backgroundImage: `url(${car})`,
-    backgroundSize: "cover",
-    height: "100%",
-    position: "absolute",
-    top: "0",
-    width: "100%",
-    zIndex: "1"
-  },
-  downloadResume: {
-    height: 100
   }
 };
 
@@ -119,7 +106,7 @@ class AboutComponent extends PureComponent {
             I'm an experienced Full-stack Software Developer who can bring a diverse skill set and creative drive to software development.
           </Typography>
           <div className={classes.imgContainer}>
-            <img title="Gamaliel Padillo vanity shot" alt="Gamaliel Padillo vanity shot" src={mypic} className={classes.img}/>
+            <img title="Gamaliel Padillo vanity shot" alt="Gamaliel Padillo vanity shot" src={mypic} className={classes.img} />
           </div>
           <div className={classes.greetingContainer}>
             <div className={classes.greeting}>
@@ -128,8 +115,8 @@ class AboutComponent extends PureComponent {
                 I believe that no one really stops learning - so we should all strive to learn something new everyday!
                 When I'm not trying to learn something, I'm usually programming. It could be for this website, or anything else. I try to
                 program everyday if possible.
-                <br/>
-                <br/>
+                <br />
+                <br />
                 I have more projects in the making so stay tuned!
               </Typography>
             </div>
@@ -147,12 +134,6 @@ class AboutComponent extends PureComponent {
                 <div className={classes.backgroundConnect}></div>
               </div>
             </div>
-          </div>
-          <div className={classNames(classes.linkContainer, classes.downloadResume)}>
-            <Button component={"a"} href={gamalielpadillo} className={classes.linkButton} download>
-              <Typography variant="subheading" align="center" className={classes.linkText}> My Resume </Typography>
-            </Button>
-            <div className={classes.backgroundResume}></div>
           </div>
         </div>
       </div>
