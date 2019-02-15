@@ -2,7 +2,7 @@ import React, { PureComponent } from "react";
 import Button from "@material-ui/core/Button";
 import { withStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
-import email from "../../assets/iconmonstr-email-1-240.png";
+// import email from "../../assets/iconmonstr-email-1-240.png";
 import github from "../../assets/iconmonstr-github-1-240.png";
 import instagram from "../../assets/iconmonstr-instagram-1-240.png";
 import linkedin from "../../assets/iconmonstr-linkedin-1-240.png";
@@ -70,12 +70,6 @@ class ConnectComponent extends PureComponent {
   render() {
     const { classes } = this.props;
     const links = [
-      {
-        text: "Email",
-        link: "mailto:gamalielgad1234@gmail.com",
-        classes: "email",
-        img: email
-      },
       {
         text: "Github",
         link: "https://github.com/gamalielhere",
