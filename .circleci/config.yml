@@ -48,4 +48,4 @@ workflows:
       - echo_built:
         filters:
             branches:
-              only: develop
+              only: master
