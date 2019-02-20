@@ -1,5 +1,11 @@
 version: 2
 jobs:
+  echo_built:
+    working_directory: ~/portfolio
+    docker:
+      - image: circleci/node:8.9
+    steps:
+      - echo "Your website has been built and deployed"
   deploy_production:
     working_directory: ~/portfolio
     docker:
@@ -35,5 +41,11 @@ workflows:
     jobs:
       - deploy_production:
           filters:
+            branches:
+              only: develop
+  test_master:
+    jobs:
+      - echo_built:
+        filters:
             branches:
               only: develop
