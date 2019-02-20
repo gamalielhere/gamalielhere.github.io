@@ -30,7 +30,7 @@ jobs:
             - node_modules
       - run:
           name: Build React Application
-          command: rm .gitignore; yarn build
+          command: yarn build
       - deploy:
           name: Deploy dist folder to master branch
           command: mv CNAME ./build; yarn deploy
