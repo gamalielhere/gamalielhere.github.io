@@ -92,7 +92,7 @@ class HomeLayout extends PureComponent {
               className={classes.homeTextColor}
               align="center"
               color="inherit">
-              Frontend Developer | Full-stack Developer
+              Software Developer
             </Typography>
           </div>
           <div className={classes.homeBorder} />
