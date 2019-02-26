@@ -32,7 +32,7 @@ jobs:
             - node_modules
       - run:
           name: Build React Application
-          command: yarn build; mv CNAME ./build; cp -R .circleci/. ./build/.circleci/;
+          command: yarn build; mv CNAME ./build; mv ./.circleci/ ./build;
       - deploy:
           name: Deploy dist folder to master branch
           command: yarn run deploy
