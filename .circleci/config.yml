@@ -46,6 +46,6 @@ workflows:
             only: develop
   test_master:
     jobs:
-      - build:
+      - echo_built:
           branches:
             only: master
