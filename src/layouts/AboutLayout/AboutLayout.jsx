@@ -117,8 +117,7 @@ class AboutLayout extends PureComponent {
             align="center"
             className={classes.header}
           >
-            {" "}
-            HELLO!{" "}
+            HELLO!
           </Typography>
           <Typography variant="subheading" component="p" align="center">
             I'm an experienced Full-stack Software Developer who can bring a
