@@ -1,0 +1,53 @@
+version: 2
+jobs:
+  echo_built:
+    working_directory: ~/portfolio
+    docker:
+      - image: circleci/node:8.9
+    steps:
+      - run:
+          name: Echo process
+          command: echo "Your website has been built and deployed"
+  deploy_production:
+    working_directory: ~/portfolio
+    docker:
+      - image: circleci/node:8.9
+
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "af:ba:7d:a2:eb:a7:4e:db:1d:8d:0a:e6:5c:60:19:b5"
+      - run:
+          name: Set user info
+          command: git config --global user.email "gamalielgad1234@gmail.com"; git config --global user.name "Yel CircleCi"
+      - checkout
+      - restore_cache:
+          key: portfolio-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
+      - run:
+          name: Install NPM Dependencies
+          command: yarn install
+      - save_cache:
+          key: portfolio-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
+          paths:
+            - node_modules
+      - run:
+          name: Build React Application
+          command: yarn build
+      - deploy:
+          name: Deploy dist folder to master branch
+          command: mv CNAME ./build; cp -R .circleci/ ./build/.circleci/; yarn deploy
+
+workflows:
+  version: 2
+  build_develop:
+    jobs:
+      - deploy_production:
+          filters:  
+            branches:
+              only: develop
+  test_master:
+    jobs:
+      - echo_built:
+          filters:  
+            branches:
+              only: master
