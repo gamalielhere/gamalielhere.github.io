@@ -96,6 +96,18 @@ const classes = {
 class AboutLayout extends PureComponent {
   render() {
     const { classes } = this.props;
+    const items = [
+      {
+        link: "/projects",
+        name: "Projects",
+        class: "backgroundProjects"
+      },
+      {
+        link: "/connect",
+        name: "Connect",
+        class: "backgroundConnect"
+      }
+    ]
     return (
       <div className={className("pageContainer", classes.root)}>
         <div className={classes.rootItem}>
@@ -119,18 +131,16 @@ class AboutLayout extends PureComponent {
               </Typography>
             </div>
             <div className={classes.links}>
-              <div className={classes.linkContainer}>
-                <Button component={Link} to="/projects" className={classes.linkButton}>
-                  <Typography variant="subheading" align="center" className={classes.linkText}> Projects </Typography>
-                </Button>
-                <div className={classes.backgroundProjects}></div>
-              </div>
-              <div className={classes.linkContainer}>
-                <Button component={Link} to="/connect" className={classes.linkButton}>
-                  <Typography variant="subheading" align="center" className={classes.linkText}> Connect </Typography>
-                </Button>
-                <div className={classes.backgroundConnect}></div>
-              </div>
+              {items.map((item, idx) => {
+                return (
+                  <div className={classes.linkContainer} key={item.name + idx}>
+                    <Button component={Link} to={item.link} className={classes.linkButton}>
+                      <Typography variant="subheading" align="center" className={classes.linkText}> {item.name} </Typography>
+                    </Button>
+                    <div className={classes[item.class]}></div>
+                  </div>  
+                );
+              })}
             </div>
           </div>
         </div>
