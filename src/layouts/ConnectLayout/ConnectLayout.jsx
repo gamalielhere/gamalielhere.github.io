@@ -112,7 +112,8 @@ class ConnectLayout extends PureComponent {
                 key={item.text + item.classes}
                 href={item.link}
                 target="_blank"
-                className={classes[item.classes]}>
+                className={classes[item.classes]}
+              >
                 <img
                   title={item.text}
                   alt={item.text}

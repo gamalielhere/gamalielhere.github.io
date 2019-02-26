@@ -84,28 +84,33 @@ class HomeLayout extends PureComponent {
               variant="display3"
               className={classes.homeTextColor}
               align="center"
-              color="inherit">
+              color="inherit"
+            >
               Gamaliel Padillo
             </Typography>
             <Typography
               variant="headline"
               className={classes.homeTextColor}
               align="center"
-              color="inherit">
+              color="inherit"
+            >
               Software Developer
             </Typography>
           </div>
           <div className={classes.homeBorder} />
           <div className={classes.homeButtons}>
-            {
-              links.map((item, idx) => {
-                return (
-                  <Button component={Link} to={item.link} className={classes.homeButton} key={item.text+idx}>
-                    {item.text}
-                  </Button>
-                )
-              })
-            }
+            {links.map((item, idx) => {
+              return (
+                <Button
+                  component={Link}
+                  to={item.link}
+                  className={classes.homeButton}
+                  key={item.text + idx}
+                >
+                  {item.text}
+                </Button>
+              );
+            })}
           </div>
         </div>
         <div className={classes.homeBackground} />

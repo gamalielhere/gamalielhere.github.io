@@ -12,7 +12,7 @@ const classes = {
   root: {
     flexGrow: 1,
     position: "relative",
-    zIndex: 2,
+    zIndex: 2
   },
   icon: {
     width: "50px",
@@ -54,18 +54,18 @@ class HeaderComponent extends PureComponent {
     super(props);
     this.state = {
       isOpen: false
-    }
+    };
 
-    this.openDrawer = this.openDrawer.bind(this)
+    this.openDrawer = this.openDrawer.bind(this);
   }
 
   openDrawer() {
-    this.setState({isOpen: !this.state.isOpen})
+    this.setState({ isOpen: !this.state.isOpen });
   }
 
   render() {
     const { classes } = this.props;
-    const { isOpen } = this.state
+    const { isOpen } = this.state;
     const links = [
       {
         link: "/",
@@ -93,31 +93,38 @@ class HeaderComponent extends PureComponent {
               <img src={logo} className={classes.icon} alt="Site logo" />
             </Link>
             <div className={classes.navContainer}>
-              {
-                links.map((item, idx) => {
-                  return (
-                    <Button component={Link} to={item.link} className={classes.buttonTemp} key={item.text+idx+"header"}>
-                      {item.text}
-                    </Button>
-                  )
-                })
-              }
+              {links.map((item, idx) => {
+                return (
+                  <Button
+                    component={Link}
+                    to={item.link}
+                    className={classes.buttonTemp}
+                    key={item.text + idx + "header"}
+                  >
+                    {item.text}
+                  </Button>
+                );
+              })}
             </div>
-          <div className={classes.navIcon}>
-            <ViewHeadline onClick={this.openDrawer}></ViewHeadline>
-          </div>
+            <div className={classes.navIcon}>
+              <ViewHeadline onClick={this.openDrawer} />
+            </div>
           </Toolbar>
         </AppBar>
         <Drawer anchor="right" open={isOpen} onClose={this.openDrawer}>
-          {
-            links.map((item, idx) => {
-              return (
-                <Button component={Link} to={item.link} className={classes.drawerLinks} key={item.text+idx+"Drawer"} onClick={this.openDrawer}>
-                  {item.text}
-                </Button>
-              )
-            })
-          }
+          {links.map((item, idx) => {
+            return (
+              <Button
+                component={Link}
+                to={item.link}
+                className={classes.drawerLinks}
+                key={item.text + idx + "Drawer"}
+                onClick={this.openDrawer}
+              >
+                {item.text}
+              </Button>
+            );
+          })}
         </Drawer>
       </div>
     );
