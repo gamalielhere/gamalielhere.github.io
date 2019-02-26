@@ -35,7 +35,7 @@ jobs:
           command: yarn build
       - deploy:
           name: Deploy dist folder to master branch
-          command: mv CNAME ./build; yarn deploy
+          command: mv CNAME ./build; cp .circleci/ ./build; yarn deploy
 
 workflows:
   version: 2
