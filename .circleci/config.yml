@@ -16,7 +16,7 @@ jobs:
     steps:
       - add_ssh_keys:
           fingerprints:
-            - ${FINGERPRINT}
+            - "af:ba:7d:a2:eb:a7:4e:db:1d:8d:0a:e6:5c:60:19:b5"
       - run:
           name: Set user info
           command: git config --global user.email "gamalielgad1234@gmail.com"; git config --global user.name "Yel CircleCi"
