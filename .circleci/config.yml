@@ -5,7 +5,9 @@ jobs:
     docker:
       - image: circleci/node:8.9
     steps:
-      - echo "Your website has been built and deployed"
+      - run:
+        name: Echo process
+        command: echo "Your website has been built and deployed"
   deploy_production:
     working_directory: ~/portfolio
     docker:
@@ -37,7 +39,7 @@ jobs:
 
 workflows:
   version: 2
-  test_deploy:
+  build_develop:
     jobs:
       - deploy_production:
           filters:
