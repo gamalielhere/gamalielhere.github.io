@@ -1,8 +1,7 @@
 {
   "name": "portfolio",
   "homepage": "https://gamalielhere.github.io/",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
   "dependencies": {
     "@material-ui/icons": "^1.1.0",
     "classnames": "^2.2.5",
