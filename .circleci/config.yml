@@ -42,12 +42,12 @@ workflows:
   build_develop:
     jobs:
       - deploy_production:
+        filters:  
           branches:
-            filters:
-              only: develop
+            only: develop
   test_master:
     jobs:
       - echo_built:
+        filters:  
           branches:
-            filters:
-              only: master
+            only: master
