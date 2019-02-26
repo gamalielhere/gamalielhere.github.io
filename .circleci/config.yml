@@ -45,8 +45,9 @@ workflows:
           filters:
             branches:
               only: develop
+  test_master:
+    jobs:
       - echo_built:
-        filters:
+          filters:
             branches:
               only: master
-  
