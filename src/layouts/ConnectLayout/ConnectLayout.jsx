@@ -101,7 +101,7 @@ class ConnectLayout extends PureComponent {
             Connect with me!
           </Typography>
           <Typography variant="subheading" component="p">
-            Find me on any of these links:
+            Follow me on any of these links:
           </Typography>
         </div>
         <div className={classes.linkContainer}>
