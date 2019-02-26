@@ -159,8 +159,7 @@ class AboutLayout extends PureComponent {
                         align="center"
                         className={classes.linkText}
                       >
-                        {" "}
-                        {item.name}{" "}
+                        {item.name}
                       </Typography>
                     </Button>
                     <div className={classes[item.class]} />

@@ -18,8 +18,7 @@ class FooterComponent extends PureComponent {
     return (
       <div className={classes.footerContainer}>
         <Typography variant="subheading" color="inherit">
-          {" "}
-          © 2019 Gamaliel Padillo{" "}
+          © 2019 Gamaliel Padillo
         </Typography>
       </div>
     );
