@@ -43,9 +43,11 @@ workflows:
     jobs:
       - deploy_production:
           branches:
-            only: develop
+            filters:
+              only: develop
   test_master:
     jobs:
       - echo_built:
           branches:
-            only: master
+            filters:
+              only: master
